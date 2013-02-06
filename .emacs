@@ -16,7 +16,16 @@
 (setq auto-save-file-name-transforms
       `((".*" ,user-temporary-file-directory t)))
 
-;;;;;;;;;;;
-;;Tabs config
-;;;;;;;;;;;
+;Addes iwb function to Indent Whole Buffer
+(defun iwb ()
+  "indent whole buffer"
+  (interactive)
+  (delete-trailing-whitespace)
+  (indent-region (point-min) (point-max) nil)
+  (untabify (point-min) (point-max)))
+
+;Make emacs open ".json" files as javascript
+(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
+
+;Use spaces
 (setq-default indent-tabs-mode nil)
