@@ -10,19 +10,21 @@ alias myip="wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' 
 alias apt="sudo apt-get"
 
 # Load nvm if it is installed
-[[ -s "~/.nvm/nvm.sh" ]] && . "~/.nvm/nvm.sh"
+[[ -x ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
 alias setup-nvm="curl https://raw.github.com/creationix/nvm/master/install.sh | sh"
 
 # Prompt setup
-USER="\[$(tput setaf 6)\]\u\[$(tput sgr0)\]"
-HST="\[$(tput setaf 2)\]\h\[$(tput sgr0)\]"
-WD="\[$(tput setaf 3)\]\w\[$(tput sgr0)\]"
-JOBS="\[$(tput setaf 1)\]jobs: \j\[$(tput sgr0)\]"
+source ~/.git-prompt.sh
+source ~/.colors.sh
+USER="\[$_fg_cyan\]\u\[$_reset\]"
+HOST="\[$_fg_green\]\h\[$_reset\]"
+CWD="\[$_fg_yellow\]\w\[$_reset\]"
+JOBS="\[$_fg_red\]jobs: \j\[$_reset\]"
 if (( $UID == 0 )); then
     PROMPT="# "
 else
     PROMPT="$ "
 fi
-export PS1="($USER@$HST:$WD)${PROMPT}"
+export PS1="$USER@$HOST:$CWD\[$_fg_purple\]\$(__git_ps1)\[$_reset\]${PROMPT}"
