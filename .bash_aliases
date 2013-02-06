@@ -17,7 +17,7 @@ alias setup-nvm="curl https://raw.github.com/creationix/nvm/master/install.sh | 
 
 # Prompt setup
 source ~/.git-prompt.sh
-source ~/.colors.sh
+source ~/.colors
 USER="\[$_fg_cyan\]\u\[$_reset\]"
 HOST="\[$_fg_green\]\h\[$_reset\]"
 CWD="\[$_fg_yellow\]\w\[$_reset\]"
