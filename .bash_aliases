@@ -13,7 +13,9 @@ alias apt="sudo apt-get"
 [[ -x ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
+alias setup-base="apt install git curl emacs23-nox htop build-essential"
 alias setup-nvm="curl https://raw.github.com/creationix/nvm/master/install.sh | sh"
+alias setup-all="setup-base && setup-nvm"
 
 # Prompt setup
 source ~/.git-prompt.sh
