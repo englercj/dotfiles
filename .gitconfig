@@ -1,0 +1,18 @@
+[user]
+    name = Chad Engler
+    email = englercj@live.com
+[push]
+    default = matching
+[core]
+    excludesfile = ~/.gitignore
+[color]
+    ui = auto
+[alias]
+    last = log -1
+    lo = log --stat
+    lm = log --stat --author=englercj@live.com --abbrev-commit
+
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    graph = log --graph --decorate --pretty=oneline --abbrev-commit
+
+    sha1 = !sh -c 'git rev-parse ${1-`echo HEAD`}' -
