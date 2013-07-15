@@ -1,0 +1,6 @@
+# Sublime Files
+*.sublime-*
+
+# Emacs files
+*~
+\#*#
