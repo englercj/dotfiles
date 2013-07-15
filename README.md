@@ -10,7 +10,7 @@ My common dotfiles
 git clone https://github.com/englercj/dotfiles.git /tmp/dotfiles &&
 
 # copy the dotfiles over (but not .git, readme, or the folder itself)
-find /tmp/dotfiles/ ! \( -path "*.git*" -o -name "README.md" -o -path "/tmp/dotfiles/" \) -exec cp {} ~/ \; &&
+find /tmp/dotfiles/ ! \( -path "*.git" -o -path "*.git/*" -o -name "README.md" -o -path "/tmp/dotfiles/" \) -exec cp {} ~/ \; &&
 
 # remove the cloned folder
 rm -rf /tmp/dotfiles/
