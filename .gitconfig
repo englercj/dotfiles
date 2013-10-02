@@ -14,7 +14,7 @@
     lo = log --stat
     lm = log --stat --author=englercj@live.com --abbrev-commit
 
-    ls = status -sb
+    ls = status
 
     lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
     graph = log --graph --decorate --pretty=oneline --abbrev-commit
