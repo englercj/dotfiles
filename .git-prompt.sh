@@ -1,6 +1,4 @@
-
-<!-- saved from url=(0070)https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"># bash/zsh git prompt support
+# bash/zsh git prompt support
 #
 # Copyright (C) 2006,2007 Shawn O. Pearce &lt;spearce@spearce.org&gt;
 # Distributed under the GNU General Public License, version 2.0.
@@ -412,4 +410,3 @@ __git_ps1 ()
 		fi
 	fi
 }
-</pre></body></html>
