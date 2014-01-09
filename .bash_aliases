@@ -1,3 +1,4 @@
+## Useful Aliases
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
@@ -9,15 +10,20 @@ alias myip="wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' 
 
 alias apt="sudo apt-get"
 
-# Load nvm if it is installed
-[[ -x ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
-[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-
-alias setup-base="apt install git curl emacs23-nox htop build-essential"
+alias setup-base="apt install git wget curl emacs23-nox htop build-essential apg ccze"
 alias setup-nvm="curl https://raw.github.com/creationix/nvm/master/install.sh | sh"
 alias setup-all="setup-base && setup-nvm"
 
-# Prompt setup
+## Load nvm if it is installed
+[[ -x ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+
+## Useful functions
+function ct() {
+    tail -f -n 25 $1 | ccze -A
+}
+
+## Prompt setup
 source ~/.git-prompt.sh
 source ~/.colors
 USER="\[$_fg_cyan\]\u\[$_reset\]"
