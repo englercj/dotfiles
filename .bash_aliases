@@ -12,7 +12,7 @@ alias apt="sudo apt-get"
 
 alias setup-base="apt install git wget curl emacs23-nox htop build-essential apg ccze"
 alias setup-jq="wget -O /usr/bin/jq http://stedolan.github.io/jq/download/linux64/jq && chmod +x /usr/bin/jq"
-alias setup-fw="curl -s https://api.github.com/gists/11163178 | jq -r '.files["firewall.sh"].content' | sh"
+alias setup-fw="curl -s https://api.github.com/gists/11163178 | jq -r '.files[\"firewall.sh\"].content' | sh"
 alias setup-nvm="curl https://raw.github.com/creationix/nvm/master/install.sh | sh"
 alias setup-all="setup-base && setup-jq && setup-fw && setup-nvm"
 
