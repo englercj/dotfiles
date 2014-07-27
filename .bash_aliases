@@ -8,8 +8,6 @@ alias grep='grep --color=auto'
 
 alias myip="wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 
-alias apt="sudo apt"
-
 alias setup-base="apt install git wget curl emacs23-nox htop build-essential apg ccze"
 alias setup-jq="wget -O /usr/bin/jq http://stedolan.github.io/jq/download/linux64/jq && chmod +x /usr/bin/jq"
 alias setup-fw="mkdir -p ~/.fw && curl -s https://api.github.com/gists/11163178 | jq -r '.files[\"firewall.sh\"].content' > ~/.fw/firewall.sh && chmod +x ~/.fw/firewall.sh"
