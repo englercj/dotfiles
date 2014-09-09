@@ -15,7 +15,7 @@ alias setup-nvm="curl https://raw.github.com/creationix/nvm/master/install.sh | 
 alias setup-all="setup-base && setup-jq && setup-fw && setup-nvm"
 
 ## Load nvm if it is installed
-[[ -x ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
+[[ -e ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
 ## Useful functions
