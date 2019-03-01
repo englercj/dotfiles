@@ -7,13 +7,11 @@
     ui = auto
 [alias]
     co = checkout
-
+    ls = status
+    
     last = log -1
     lo = log --stat
     lm = log --stat --author=englercj@live.com --abbrev-commit
-
-    ls = status
-
     lol = log --graph --decorate --pretty=oneline --abbrev-commit --date=relative --format=format:'%C(red)%h%C(reset) - %C(green)(%ar)%C(reset) %s - %C(dim cyan)%an%C(reset) %C(auto)%d%C(reset)'
 
     sha1 = rev-parse HEAD
