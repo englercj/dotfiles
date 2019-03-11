@@ -8,7 +8,9 @@
 [alias]
     co = checkout
     ls = status
-    
+
+    orphans = "!git log --pretty=oneline --abbrev-commit --graph --decorate `git reflog | cut -d \" \" -f 1`"
+
     last = log -1
     lo = log --stat
     lm = log --stat --author=englercj@live.com --abbrev-commit
