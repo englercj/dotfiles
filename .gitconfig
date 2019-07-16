@@ -8,14 +8,6 @@
 [alias]
     co = checkout
     ls = status
-
-    orphans = "!git log --pretty=oneline --abbrev-commit --graph --decorate `git reflog | cut -d \" \" -f 1`"
-
-    last = log -1
-    lo = log --stat
-    lm = log --stat --author=englercj@live.com --abbrev-commit
     lol = log --graph --decorate --pretty=oneline --abbrev-commit --date=relative --format=format:'%C(red)%h%C(reset) - %C(green)(%ar)%C(reset) %s - %C(dim cyan)%an%C(reset) %C(auto)%d%C(reset)'
-
-    sha1 = rev-parse HEAD
     sha = rev-parse HEAD
-    ha = rev-parse --short HEAD
+    gc-branches = "!LANG=en_US git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
