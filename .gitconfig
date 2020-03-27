@@ -11,4 +11,5 @@
     lol = log --graph --decorate --pretty=oneline --abbrev-commit --date=relative --format=format:'%C(red)%h%C(reset) - %C(green)(%ar)%C(reset) %s - %C(dim cyan)%an%C(reset) %C(auto)%d%C(reset)'
     sha = rev-parse HEAD
     ha = rev-parse --short HEAD
+    stat = show --stat=150
     gc-branches = "!LANG=en_US git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
